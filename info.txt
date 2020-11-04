@@ -1,0 +1,5 @@
+> We'll create a cafe website that lists all the cafes and their location.
+> We'll use Firestore as database to store our data.
+> Things to learn from this project :
+  1. How to hook up a simple UI with a firestore database in firebase.
+  2. How to add and delete data, etc

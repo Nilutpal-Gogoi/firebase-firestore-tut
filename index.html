@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Firebase Tutorial</title>
+</head>
+<body>
+    <h1>Cloud Cafe</h1>
+    <div class="content">
+      <form id="add-cafe-form">
+        <!-- --------------- Adding element to the database using front end ------------ -->
+        <input type="text" name="name" placeholder= "Cafe name">
+        <input type="text" name="city" placeholder="Cafe city">
+        <button>Add Cafe</button>
+      </form>
+      <ul id="cafe-list"></ul>
+    </div>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyB1r1Oo2jHqi9VFZA8eKr4X8XZ-9ohcEr4", //this determines which project we're hooking up to.
+        authDomain: "fir-tut-2618d.firebaseapp.com",
+        databaseURL: "https://fir-tut-2618d.firebaseio.com",
+        projectId: "fir-tut-2618d",
+        storageBucket: "fir-tut-2618d.appspot.com",
+        messagingSenderId: "349785657893",
+        appId: "1:349785657893:web:de85127af88061b7b7e5cc"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // creating a constant called db and we're gonna store our database inside this
+      // Now to get a reference to our database we write firebase.firestore() and store it in db
+      const db = firebase.firestore();
+      //  Now we set up some settings on the database so that we don't get any warning errors in console.
+      db.settings({timestampsInSnapshots: true})
+    </script>
+    <script src="./script/script.js"></script>
+</body>
+</html>
